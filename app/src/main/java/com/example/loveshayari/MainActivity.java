@@ -1,13 +1,14 @@
 package com.example.loveshayari;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import MyAdapter.MyAdapter;
 
@@ -293,7 +294,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent=new Intent(MainActivity.this,DetailsView_Activity.class);
+                Intent intent=new Intent(MainActivity.this, Second_Activity.class);
                 if (position==0)
                 {
                     intent.putExtra("shayari",Shubhkamana);

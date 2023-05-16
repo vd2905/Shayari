@@ -15,10 +15,10 @@
             android:name=".Fourth_Activity"
             android:exported="false" />
         <activity
-            android:name=".Shayaripage_Activity"
+            android:name=".Third_Activity"
             android:exported="false" />
         <activity
-            android:name=".DetailsView_Activity"
+            android:name=".Second_Activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
