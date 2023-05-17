@@ -89,7 +89,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/activity_fourth_page_btn1"
+                android:id="@+id/btn1"
                 android:layout_weight="1"
                 android:background="#E40505"
                 android:textColor="@color/white"
@@ -101,19 +101,19 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/activity_fourth_page_btn2"
+                android:id="@+id/btn2"
                 android:layout_weight="1"
                 android:background="#E40505"
                 android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:text="Text Color"
                 android:textSize="@dimen/_12sdp"
-                android:layout_margin="@dimen/_5sdp"/>/>
+                android:layout_margin="@dimen/_5sdp"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/activity_fourth_page_btn3"
+                android:id="@+id/btn3"
                 android:layout_weight="1"
                 android:background="#E40505"
                 android:textColor="@color/white"
@@ -131,7 +131,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/activity_fourth_page_btn4"
+                android:id="@+id/btn4"
                 android:layout_weight="1"
                 android:background="#E40505"
                 android:textColor="@color/white"
@@ -143,19 +143,19 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/activity_fourth_page_btn5"
+                android:id="@+id/btn5"
                 android:layout_weight="1"
                 android:background="#E40505"
                 android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:text="Emoji"
                 android:textSize="@dimen/_12sdp"
-                android:layout_margin="@dimen/_5sdp"/>/>
+                android:layout_margin="@dimen/_5sdp"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/activity_fourth_page_btn6"
+                android:id="@+id/btn6"
                 android:layout_weight="1"
                 android:background="#E40505"
                 android:textColor="@color/white"

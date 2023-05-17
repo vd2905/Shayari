@@ -40,7 +40,7 @@ public class GradientAdapter extends BaseAdapter {
         convertView = LayoutInflater.from(third_activity).inflate(R.layout.bottom_sheet_gradients1,parent,false);
         TextView textView = convertView.findViewById(R.id.gridGradients);
 
-        textView.setText(""+gradientArr[position]);
+        textView.setBackgroundResource(gradientArr[position]);
         return convertView;
     }
 }

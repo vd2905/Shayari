@@ -9,12 +9,12 @@ import android.widget.TextView;
 import com.example.loveshayari.Fourth_Activity;
 import com.example.loveshayari.R;
 
-public class TextcolorAdapter extends BaseAdapter {
+public class BgAdapter extends BaseAdapter {
 
     Fourth_Activity fourth_activity;
     int[] colorArr;
 
-    public TextcolorAdapter(Fourth_Activity fourth_activity, int[] colorArr)
+    public BgAdapter(Fourth_Activity fourth_activity, int[] colorArr)
     {
         this.fourth_activity = fourth_activity;
         this.colorArr = colorArr;

@@ -40,7 +40,9 @@ public class Third_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_third_page);
 
         txt1=findViewById(R.id.activity_third_page_txt1);
-        txt2=findViewById(R.id.activity_third_page_txt2);
+        String Shayari[]=getIntent().getStringArrayExtra("shayari");
+        int position=getIntent().getIntExtra("pos",0);
+
         img1=findViewById(R.id.img1);
         img2=findViewById(R.id.img2);
         img3=findViewById(R.id.img3);
@@ -48,9 +50,9 @@ public class Third_Activity extends AppCompatActivity {
         back_button=findViewById(R.id.back_button);
         next_button=findViewById(R.id.next_button);
         share_button=findViewById(R.id.share_button);
+        txt2=findViewById(R.id.activity_third_page_txt2);
 
-        int position=getIntent().getIntExtra("pos",0);
-        String Shayari[]=getIntent().getStringArrayExtra("shayari");
+
         img1.setImageResource(R.drawable.img_12);
         img2.setImageResource(R.drawable.img_13);
         img3.setImageResource(R.drawable.img_14);
@@ -80,13 +82,16 @@ public class Third_Activity extends AppCompatActivity {
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(cnt<15) {
+                if(cnt<15)
+                {
                     if (cnt == i) {
                         txt1.setBackgroundResource(config.gradientArr[i]);
                         cnt++;
                         i++;
                     }
-                }else{
+                }
+                else
+                {
                     cnt=0;
                     i=0;
                 }
@@ -119,14 +124,17 @@ public class Third_Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent=new Intent(Third_Activity.this,Fourth_Activity.class);
-                intent.putExtra("pos",position);
+                intent.putExtra("gridcolorarr",config.gradientArr);
                 intent.putExtra("shayari",Shayari);
+                intent.putExtra("d",d);
 
                 startActivity(intent);
-
             }
         });
+
         d=position;
+        n=d+1;
+        txt2.setText(""+n+"/"+Shayari.length);
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,8 +150,7 @@ public class Third_Activity extends AppCompatActivity {
         share_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent share = new Intent();
-                share.setAction(Intent.ACTION_SEND);
+                Intent share = new Intent(Intent.ACTION_SEND);
                 share.putExtra(Intent.EXTRA_TEXT,txt1.getText().toString());
                 share.setType("text/plain");
                 share = Intent.createChooser(share,"Share Via: ");

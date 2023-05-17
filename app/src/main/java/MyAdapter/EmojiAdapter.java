@@ -9,20 +9,19 @@ import android.widget.TextView;
 import com.example.loveshayari.Fourth_Activity;
 import com.example.loveshayari.R;
 
-public class TextcolorAdapter extends BaseAdapter {
+public class EmojiAdapter extends BaseAdapter {
 
     Fourth_Activity fourth_activity;
-    int[] colorArr;
+    String[] emoji;
 
-    public TextcolorAdapter(Fourth_Activity fourth_activity, int[] colorArr)
-    {
+    public EmojiAdapter(Fourth_Activity fourth_activity, String[] emoji) {
         this.fourth_activity = fourth_activity;
-        this.colorArr = colorArr;
+        this.emoji = emoji;
     }
 
     @Override
     public int getCount() {
-        return colorArr.length;
+        return emoji.length;
     }
 
     @Override
@@ -38,10 +37,10 @@ public class TextcolorAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        convertView = LayoutInflater.from(fourth_activity).inflate(R.layout.bg_color_item,parent,false);
-        TextView textView = convertView.findViewById(R.id.background);
+        convertView = LayoutInflater.from(fourth_activity).inflate(R.layout.emoji_item,parent,false);
 
-        textView.setBackgroundResource(colorArr[position]);
+        TextView textView = convertView.findViewById(R.id.emoji_textview);
+        textView.setText(""+emoji[position]);
         return convertView;
     }
 }
