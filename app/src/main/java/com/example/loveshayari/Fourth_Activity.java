@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import MyAdapter.GradientAdapter1;
+import MyAdapter.TextcolorAdapter;
 import MyAdapter.config;
 
 public class Fourth_Activity extends AppCompatActivity {
@@ -74,8 +75,6 @@ public class Fourth_Activity extends AppCompatActivity {
                         bottomSheetDialog.dismiss();
                     }
                 });
-
-
             }
         });
 
@@ -85,14 +84,14 @@ public class Fourth_Activity extends AppCompatActivity {
             {
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(Fourth_Activity.this);
                 bottomSheetDialog.setContentView(R.layout.bg_color);
-                GradientAdapter1 adapter1=new GradientAdapter1(Fourth_Activity.this,config.colorarr);
+                TextcolorAdapter adapter=new TextcolorAdapter(Fourth_Activity.this,config.colorArr);
                 gridView=bottomSheetDialog.findViewById(R.id.bg_gridview);
-                gridView.setAdapter(adapter1);
+                gridView.setAdapter(adapter);
                 bottomSheetDialog.show();
                 gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        textView.setBackgroundResource(config.colorarr[i]);
+                        textView.setBackgroundResource(config.colorArr[i]);
                         bottomSheetDialog.dismiss();
                     }
                 });
@@ -104,14 +103,14 @@ public class Fourth_Activity extends AppCompatActivity {
             {
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(Fourth_Activity.this);
                 bottomSheetDialog.setContentView(R.layout.text_color);
-                GradientAdapter1 adapter1=new GradientAdapter1(Fourth_Activity.this,config.colorarr);
+                TextcolorAdapter adapter=new TextcolorAdapter(Fourth_Activity.this,config.colorArr1);
                 gridView=bottomSheetDialog.findViewById(R.id.text_color_gridview);
-                gridView.setAdapter(adapter1);
+                gridView.setAdapter(adapter);
                 bottomSheetDialog.show();
                 gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        textView.setBackgroundResource(config.colorarr[i]);
+                        textView.setTextColor(getResources().getColor(config.colorArr1[i]));
                         bottomSheetDialog.dismiss();
                     }
                 });
