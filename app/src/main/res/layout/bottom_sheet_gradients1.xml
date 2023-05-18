@@ -6,8 +6,12 @@
 
     <TextView
         android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_150sdp"
+        android:layout_height="@dimen/_130sdp"
         android:layout_margin="@dimen/_5sdp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:padding="@dimen/_30sdp"
+        android:text="😀💓😃😂💖🤣 प्यार मोहब्बत शायरी 😀💓😃😂💖🤣 "
         android:id="@+id/gridGradients">
 
     </TextView>

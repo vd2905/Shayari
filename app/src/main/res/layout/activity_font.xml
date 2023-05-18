@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_100sdp">
 
-    <GridView
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/fonts_gridview"
-        android:numColumns="12"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
-        android:layout_margin="@dimen/_5sdp"
-        tools:listitem="@layout/font_item">
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/seatLegendLayout">
 
-    </GridView>
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_grid_tableLayout"
+                android:layout_width="1200dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <GridView
+                    android:id="@+id/fonts_gridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:columnWidth="@dimen/_100sdp"
+                    android:gravity="center"
+                    android:numColumns="10"
+                    android:horizontalSpacing="@dimen/_1sdp"
+                    android:scrollbars="horizontal"
+                    android:stretchMode="none"
+                    android:verticalSpacing="@dimen/_1sdp">
+
+                </GridView>
+
+            </LinearLayout>
+        </FrameLayout>
+    </HorizontalScrollView>
 
 </LinearLayout>

@@ -38,8 +38,8 @@ public class Second_Activity extends AppCompatActivity {
 
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
                 Intent intent=new Intent(Second_Activity.this, Third_Activity.class);
                 intent.putExtra("pos",position);
                 intent.putExtra("shayari",shayari);

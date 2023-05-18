@@ -40,7 +40,7 @@ public class Third_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_third_page);
 
         txt1=findViewById(R.id.activity_third_page_txt1);
-        String Shayari[]=getIntent().getStringArrayExtra("shayari");
+        String shayari[]=getIntent().getStringArrayExtra("shayari");
         int position=getIntent().getIntExtra("pos",0);
 
         img1=findViewById(R.id.img1);
@@ -56,13 +56,12 @@ public class Third_Activity extends AppCompatActivity {
         img1.setImageResource(R.drawable.img_12);
         img2.setImageResource(R.drawable.img_13);
         img3.setImageResource(R.drawable.img_14);
-        txt1.setText(""+Shayari[position]);
+        txt1.setText(""+shayari[position]);
 
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(Third_Activity.this);
                 bottomSheetDialog.setContentView(R.layout.bottom_sheet_gradients);
                 GradientAdapter adapter=new GradientAdapter(Third_Activity.this,config.gradientArr);
@@ -114,8 +113,8 @@ public class Third_Activity extends AppCompatActivity {
                 if(d>0) {
                     d--;
                     n--;
-                    txt1.setText(""+Shayari[d]);
-                    txt2.setText(""+n+"/"+Shayari.length);
+                    txt1.setText(""+shayari[d]);
+                    txt2.setText(""+n+"/"+shayari.length);
                 }
             }
         });
@@ -125,7 +124,7 @@ public class Third_Activity extends AppCompatActivity {
 
                 Intent intent=new Intent(Third_Activity.this,Fourth_Activity.class);
                 intent.putExtra("gridcolorarr",config.gradientArr);
-                intent.putExtra("shayari",Shayari);
+                intent.putExtra("shayari",shayari);
                 intent.putExtra("d",d);
 
                 startActivity(intent);
@@ -134,16 +133,16 @@ public class Third_Activity extends AppCompatActivity {
 
         d=position;
         n=d+1;
-        txt2.setText(""+n+"/"+Shayari.length);
+        txt2.setText(""+n+"/"+shayari.length);
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(d<Shayari.length-1) {
+                if(d<shayari.length-1) {
                     d++;
                     n=d+1;
-                    txt1.setText(""+Shayari[d]);
-                    txt2.setText(""+n+"/"+Shayari.length);
+                    txt1.setText(""+shayari[d]);
+                    txt2.setText(""+n+"/"+shayari.length);
                 }
             }
         });

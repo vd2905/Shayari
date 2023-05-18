@@ -12,17 +12,17 @@ import com.example.loveshayari.R;
 public class TextcolorAdapter extends BaseAdapter {
 
     Fourth_Activity fourth_activity;
-    int[] colorArr;
+    int[] colorArr1;
 
-    public TextcolorAdapter(Fourth_Activity fourth_activity, int[] colorArr)
+    public TextcolorAdapter(Fourth_Activity fourth_activity, int[] colorArr1)
     {
         this.fourth_activity = fourth_activity;
-        this.colorArr = colorArr;
+        this.colorArr1 = colorArr1;
     }
 
     @Override
     public int getCount() {
-        return colorArr.length;
+        return colorArr1.length;
     }
 
     @Override
@@ -38,10 +38,10 @@ public class TextcolorAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        convertView = LayoutInflater.from(fourth_activity).inflate(R.layout.bg_color_item,parent,false);
-        TextView textView = convertView.findViewById(R.id.background);
+        convertView = LayoutInflater.from(fourth_activity).inflate(R.layout.text_color_item,parent,false);
+        TextView textView = convertView.findViewById(R.id.text_color);
 
-        textView.setBackgroundResource(colorArr[position]);
+        textView.setBackgroundResource(colorArr1[position]);
         return convertView;
     }
 }
