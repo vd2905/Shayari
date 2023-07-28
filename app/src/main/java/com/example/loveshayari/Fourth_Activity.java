@@ -78,7 +78,7 @@ public class Fourth_Activity extends AppCompatActivity {
                         textView.setBackgroundResource(gridcolorarr[i]);
                         cnt++;
                         i++;
-                    }
+                      }
                 }else{
                     cnt=0;
                     i=0;
@@ -177,7 +177,7 @@ public class Fourth_Activity extends AppCompatActivity {
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        textView.setText(""+config.emoji[position]+"\n"+shayari[position]+"\n"+config.emoji[position]);
+                        textView.setText(""+config.emoji[position]+"\n"+shayari[d]+"\n"+config.emoji[position]);
                         bottomSheetDialog.dismiss();
                     }
                 });
